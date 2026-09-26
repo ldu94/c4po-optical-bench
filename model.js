@@ -7,7 +7,7 @@ export const catalog = [
   {id:'lmr1', name:'1″ lens mount', part:'LMR1', kind:'lens', module:'lens_holder_lmr1', width:36, depth:15, offset:0, h:22.1, file:'LMR1-Solidworks.stl', args:'use_nut=false'},
   {id:'ida12', name:'Adjustable iris', part:'IDA12', kind:'iris', module:'pinhole_ida12', width:28, depth:14, offset:0, h:12.8, file:'IDA12-P5-Solidworks.stl', args:'use_nut=false, use_surface=false'},
 ];
-export const byId = Object.fromEntries(catalog.map(c=>[c.id,c]));
+export const byId = Object.assign(Object.create(null),Object.fromEntries(catalog.map(c=>[c.id,c])));
 export function example(){ return {version:1,name:'Folded optical path',plate:{width:260,height:180,thickness:25.4,beamHeight:12.7,grid:12.7,snap:1,cornerHoles:true},components:[
 {id:'iris-1',type:'ida12',label:'Iris',x:35,y:50,angle:0},
 {id:'lens-1',type:'lmr1',label:'Lens 1',x:80,y:50,angle:0},
