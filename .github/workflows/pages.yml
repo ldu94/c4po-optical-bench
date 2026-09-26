@@ -18,8 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/model.test.mjs
+      - run: node --test tests/*.test.mjs
       - run: node tests/render-smoke.mjs --all
+      - run: node tests/render-smoke.mjs --expanded
       - run: node scripts/build-mount-scenes.mjs
       - run: git diff --exit-code cad/mount-scenes.json
       - uses: actions/configure-pages@v5

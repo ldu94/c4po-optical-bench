@@ -21,7 +21,9 @@ The package embeds its WebAssembly payload in `openscad.js`. It is loaded only i
 
 ## CAD for Precision Optics and hardware meshes
 
-`cad/thorlabs_optomech.scad`, `cad/util.scad`, and the six files in `cad/thorlabs/` are copied without modification from the user-supplied `c4po-weebay_optics` directory. Its README identifies https://github.com/ichuang/cad4optics as the project source. No standalone license file was present in that supplied folder. These files are not relicensed by this interface; original authors' and hardware vendors' rights remain with their respective holders.
+`cad/thorlabs_optomech.scad`, `cad/aom_optomech.scad`, `cad/util.scad`, and the files in `cad/thorlabs/` are copied without modification from the user-supplied `c4po-weebay_optics` directory. Its README identifies https://github.com/ichuang/cad4optics as the project source. No standalone license file was present in that supplied folder. These files are not relicensed by this interface; original authors' and hardware vendors' rights remain with their respective holders.
+
+STL filename extensions are normalized to the spelling referenced by the source modules. `cad/c4po-web.scad` only joins library dependencies. `cad/generated/` contains procedural meshes generated from these sources by the included script; `cad/mount-scenes.json` records their scene transforms.
 
 `cad/provenance.json` records SHA-256 digests of the supplied CAD files.
 

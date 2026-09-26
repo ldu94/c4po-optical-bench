@@ -1,11 +1,11 @@
 import {createOpenSCAD} from './vendor/openscad/openscad.js';
-import {scad} from './model.js';
+import {scad,cadFiles} from './model.js';
 self.onmessage=async ({data})=>{
  const logs=[];
  try{
   self.postMessage({status:'Loading OpenSCAD…'});
   const api=await createOpenSCAD({print:t=>logs.push(t),printErr:t=>logs.push(t)}),instance=api.getInstance();
-  const files=['thorlabs_optomech.scad','util.scad'];
+  const files=cadFiles;
   instance.FS.mkdir('/thorlabs');
   await Promise.all(files.map(async f=>{const r=await fetch('./cad/'+f);if(!r.ok)throw Error(`Cannot load CAD library: ${f}`);instance.FS.writeFile('/'+f,new Uint8Array(await r.arrayBuffer()));}));
   self.postMessage({status:'Cutting mounting holes and recesses…'});

@@ -1,10 +1,20 @@
 {
   "thorlabs_optomech.scad": "385ba16b22582ed2544016e2cd5860d2ef4c37af9970d1ca990662bf48a18ba9",
+  "aom_optomech.scad": "e1ebfa022448cee4e0168206f156d698ca515038a3ae3deeb20800d770f4de3d",
   "util.scad": "0132e020046835b16c51dcc967e653f11e2dd2244f862024c3796a3f6f4918b6",
-  "thorlabs/LMR1-Solidworks.stl": "40e99e0d85bcebec643e97020b52126cc8a5046fd4cb09ddc409cda30f3a7419",
-  "thorlabs/POLARIS-K05S1-Solidworks.stl": "6e674a1cd6ad8f3ad459ccb271eec393184cd4a5f7ca4e6b400b472d7dc5e8f3",
-  "thorlabs/KM100-Solidworks.stl": "24aaef6ad65f57e5af8c59d76e50a5cab60a49f1ea6222ca21c509e131d9dacd",
-  "thorlabs/POLARIS-C05G-Solidworks.stl": "2cd703ee3039fcaa0346d0e4e748641f9b19b9428250f99ec22721674e5c75b8",
+  "thorlabs/CP02-Solidworks.stl": "e73cf8239e42be4578fa196bb016bcab121650533ec05f68e31dc3a4eb3f2251",
+  "thorlabs/DET10A2-Solidworks.stl": "1fd1ce2154d82956749f78930bed1eb1b90197c465736d8f01094235d2e78ae7",
+  "thorlabs/HCA3-Solidworks.stl": "4d5410ceb7739a497f645e1eed4c9d8a66f8ae0c87564fa940b4c28c9c131463",
   "thorlabs/IDA12-P5-Solidworks.stl": "605ae5e27f38ca7c56a337958bddab9515d5f27d51295be2e476b30d7947a4d6",
-  "thorlabs/POLARIS-L05G-Solidworks.stl": "51fd52741f753c2c78e751e035ca20e2fc49dcebf9be0f6f8b1bf1e3f7332a38"
+  "thorlabs/IO-3D-850-VLP-Step.stl": "64f27d4f5a1bc904bfbe0199667c4f680446e8a225a10cd9855748bf13db6066",
+  "thorlabs/KM100-Solidworks.stl": "24aaef6ad65f57e5af8c59d76e50a5cab60a49f1ea6222ca21c509e131d9dacd",
+  "thorlabs/KM100PM-Solidworks-modified.stl": "8933754960e7a21bf6a2039db785aecde1343c3de93156ae863bdfe1d051a0ee",
+  "thorlabs/KM100PM-noplatform2.stl": "78b0d4517342a4c65f2d07e47d3b26f9f868a9761ceb57b769e4585866484391",
+  "thorlabs/LMR1-Solidworks.stl": "40e99e0d85bcebec643e97020b52126cc8a5046fd4cb09ddc409cda30f3a7419",
+  "thorlabs/POLARIS-C05G-Solidworks.stl": "2cd703ee3039fcaa0346d0e4e748641f9b19b9428250f99ec22721674e5c75b8",
+  "thorlabs/POLARIS-K05S1-Solidworks.stl": "6e674a1cd6ad8f3ad459ccb271eec393184cd4a5f7ca4e6b400b472d7dc5e8f3",
+  "thorlabs/POLARIS-K05S2-Solidworks.stl": "d3dde4899f44f508c7a7381f18e0521e3e13ef2d1d0012d0fca9a578020da1e6",
+  "thorlabs/POLARIS-L05G-Solidworks.stl": "51fd52741f753c2c78e751e035ca20e2fc49dcebf9be0f6f8b1bf1e3f7332a38",
+  "thorlabs/RSP05-Solidworks.stl": "d5f4ccbea6c5f9a272780a59846a135b2263ea02b384d741617d2c8cd17e6122",
+  "thorlabs/RSP1-Solidworks.stl": "3c1a3de6216a0c821ccf5512ba8ca4131fa8dd46acf74cc9b196bda8273001ca"
 }

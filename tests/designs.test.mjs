@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {DesignFiles,encodeDesign,decodeDesign,saveToShelf,readShelf} from '../designs.js';
+import {doublePassExample,example} from '../model.js';
+const storage=()=>{const values=new Map();return {getItem:k=>values.get(k),setItem:(k,v)=>values.set(k,v)};};
+test('file round-trip restores expanded components, return beams and view settings',()=>{const s=doublePassExample();s.view.showBeams=false;assert.deepEqual(decodeDesign(encodeDesign(s)),s);assert.throws(()=>decodeDesign('{bad'));assert.throws(()=>decodeDesign('x'.repeat(1000001)));});
+test('named designs survive a new session; same name updates only that entry',()=>{const db=storage(),a=example(),b=doublePassExample();saveToShelf(a,db);saveToShelf(b,db);a.plate.width=300;saveToShelf(a,db);const saved=readShelf(db);assert.equal(saved.length,2);assert.equal(saved[0].layout.plate.width,300);assert.deepEqual(saved[1].layout,b);});
+test('invalid opened files preserve the current associated file',async()=>{const files=new DesignFiles(),old={};files.file=old;await assert.rejects(files.open({getFile:async()=>({size:5,text:async()=>'{bad'})}));assert.equal(files.file,old);});
+test('failed writes abort without associating a new file',async()=>{const files=new DesignFiles();let aborted=false;await assert.rejects(files.write({createWritable:async()=>({write:async()=>{throw Error('disk full');},abort:async()=>{aborted=true;}})},'text'),/disk full/);assert.equal(aborted,true);assert.equal(files.file,null);});
+test('folder save refuses unrelated existing files and updates explicitly opened file',async()=>{const files=new DesignFiles();let written;const existing={isSameEntry:async f=>f===existing,createWritable:async()=>({write:async s=>{written=s;},close:async()=>{}})};files.directory={getFileHandle:async()=>existing};await assert.rejects(files.saveInFolder(example()),/already exists/);assert.equal(written,undefined);files.file=existing;await files.saveInFolder(example());assert.deepEqual(decodeDesign(written),example());});
