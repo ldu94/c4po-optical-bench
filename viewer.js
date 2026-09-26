@@ -1,0 +1,20 @@
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {STLLoader} from 'three/addons/loaders/STLLoader.js';
+export class Viewer{
+ constructor(host){this.host=host;this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#edf2f5');this.camera=new THREE.PerspectiveCamera(38,1,.1,10000);this.camera.up.set(0,0,1);this.renderer=new THREE.WebGLRenderer({antialias:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));host.append(this.renderer.domElement);this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.enableDamping=true;this.scene.add(new THREE.HemisphereLight(0xffffff,0x657587,3));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-200,-300,500);this.scene.add(light);this.material=new THREE.MeshStandardMaterial({color:0x88a9b4,metalness:.25,roughness:.65,side:THREE.DoubleSide});this.hardwareMaterial=new THREE.MeshStandardMaterial({color:0x2a3d49,metalness:.35,roughness:.5,side:THREE.DoubleSide});this.opticMaterial=new THREE.MeshStandardMaterial({color:0x69c4cc,metalness:.5,roughness:.2});this.mounts=new THREE.Group();this.scene.add(this.mounts);this.geometryCache=new Map();this.mountVersion=0;new ResizeObserver(()=>this.resize()).observe(host);this.renderer.setAnimationLoop(()=>{if(host.hidden)return;this.controls.update();this.renderer.render(this.scene,this.camera);});}
+ clear(){if(this.mesh){this.scene.remove(this.mesh);this.mesh.geometry.dispose();this.mesh=null;}}
+ show(bytes){this.clear();const buffer=bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),geometry=new STLLoader().parse(buffer);geometry.computeBoundingBox();geometry.computeVertexNormals();this.mesh=new THREE.Mesh(geometry,this.material);this.scene.add(this.mesh);this.resize();this.fit();}
+ async setMounts(layout,visible){const version=++this.mountVersion;this.mounts.clear();if(!visible)return;
+  this.manifest??=fetch('./cad/mount-scenes.json').then(r=>{if(!r.ok)throw Error('Mount transform library is unavailable.');return r.json();});const scenes=await this.manifest;
+  const groups=await Promise.all(layout.components.map(async c=>{const group=new THREE.Group();group.position.set(c.x,c.y,0);group.rotation.z=c.angle*Math.PI/180;
+   for(const item of scenes[c.type]){let geometry;
+    if(item.kind==='stl'){if(!this.geometryCache.has(item.file))this.geometryCache.set(item.file,fetch('./cad/'+item.file).then(async r=>{if(!r.ok)throw Error('Missing hardware mesh: '+item.file);return new STLLoader().parse(await r.arrayBuffer());}));geometry=await this.geometryCache.get(item.file);}
+    else{const key=JSON.stringify(item);if(!this.geometryCache.has(key)){geometry=new THREE.CylinderGeometry(item.r2,item.r1,item.h,48);geometry.rotateX(Math.PI/2);if(!item.center)geometry.translate(0,0,item.h/2);this.geometryCache.set(key,geometry);}geometry=this.geometryCache.get(key);}
+    const mesh=new THREE.Mesh(geometry,item.kind==='stl'?this.hardwareMaterial:this.opticMaterial);mesh.applyMatrix4(new THREE.Matrix4().set(...item.matrix.flat()));group.add(mesh);
+   }return group;
+  }));if(version!==this.mountVersion)return;this.mounts.add(...groups);this.fit();
+ }
+ fit(){if(!this.mesh&&!this.mounts.children.length)return;const box=new THREE.Box3();if(this.mesh)box.expandByObject(this.mesh);if(this.mounts.children.length)box.expandByObject(this.mounts);const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());const distance=Math.max(size.x,size.y,size.z)/Math.min(1,this.camera.aspect)*1.75;this.camera.position.copy(center).add(new THREE.Vector3(.3,-.8,.95).normalize().multiplyScalar(distance));this.controls.target.copy(center);this.camera.near=.1;this.camera.far=distance*20;this.camera.updateProjectionMatrix();this.controls.update();}
+ resize(){const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();}
+}

@@ -1,0 +1,10 @@
+{
+  "thorlabs_optomech.scad": "385ba16b22582ed2544016e2cd5860d2ef4c37af9970d1ca990662bf48a18ba9",
+  "util.scad": "0132e020046835b16c51dcc967e653f11e2dd2244f862024c3796a3f6f4918b6",
+  "thorlabs/LMR1-Solidworks.stl": "40e99e0d85bcebec643e97020b52126cc8a5046fd4cb09ddc409cda30f3a7419",
+  "thorlabs/POLARIS-K05S1-Solidworks.stl": "6e674a1cd6ad8f3ad459ccb271eec393184cd4a5f7ca4e6b400b472d7dc5e8f3",
+  "thorlabs/KM100-Solidworks.stl": "24aaef6ad65f57e5af8c59d76e50a5cab60a49f1ea6222ca21c509e131d9dacd",
+  "thorlabs/POLARIS-C05G-Solidworks.stl": "2cd703ee3039fcaa0346d0e4e748641f9b19b9428250f99ec22721674e5c75b8",
+  "thorlabs/IDA12-P5-Solidworks.stl": "605ae5e27f38ca7c56a337958bddab9515d5f27d51295be2e476b30d7947a4d6",
+  "thorlabs/POLARIS-L05G-Solidworks.stl": "51fd52741f753c2c78e751e035ca20e2fc49dcebf9be0f6f8b1bf1e3f7332a38"
+}
