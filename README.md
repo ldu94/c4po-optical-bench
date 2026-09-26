@@ -7,7 +7,7 @@ A visual editor for optical layouts and recessed base plates, built on the exist
 1. Drag a component from the library onto the plate, or click its card.
 2. Select it to enter X, Y, and counterclockwise rotation in millimeters/degrees. Use **R** to rotate 15° (Shift reverses), arrow keys to nudge, and Delete to remove.
 3. Set plate dimensions, thickness, grid spacing, and snapping. **Connect beam** joins optical centers; Escape exits. Double-click a guide to remove it.
-4. Open **3D preview** for an immediate unrendered view. It uses a plain plate blank and cached hardware meshes; moving components or changing the plate does **not** run OpenSCAD. Plate holes and recesses are omitted, and imported procedural parts are shown without boolean subtraction. **Render detailed plate** runs OpenSCAD only when requested. **Use fast preview** cancels a render and returns to the blank; geometry edits also return to fast preview. Exact results are cached for reuse, including STL export. Hardware previews load on demand, so a large project's first visit may take longer than subsequent edits.
+4. Open **3D model** to generate the base plate with native mounting holes and recesses. Geometry edits regenerate it automatically after a short debounce. The plate is hidden while new geometry is calculated; completed results are cached for reuse and STL export. Hardware meshes load on demand.
 5. **Export plate STL** always downloads the plate alone, in millimeters. **Download OpenSCAD** produces an assembly source file for desktop OpenSCAD; place it in your original c4po folder next to `thorlabs_optomech.scad`, `aom_optomech.scad`, `util.scad`, and the `thorlabs` folder. Set `show_components=false` to render only the plate there.
 6. **Save design…** opens your named design library. Save multiple designs in the browser, or download JSON files and use **Open design** to restore them. In browsers offering the File System Access API (such as desktop Chrome/Edge), use **Save design as…** or **Choose folder…** to work directly in a local directory. **Update opened file** saves changes to the associated file. The app remembers a chosen folder when browser permissions allow it; otherwise choose it again next session. Other browsers use JSON download/open. Components, positions, rotations, connections, plate settings, and viewer options all round-trip. Older version-1 files remain supported. The latest working draft is also saved automatically in this browser.
 7. Toggle **Show optical beams** in 3D to show/hide connection guides in both views. Use **Load double-pass AOM example** for an editable starter based on `doublepass_aom.scad`. Undo restores your previous layout. This starter imports component placement and beam connections, not the source's optional cuts, labels, or bespoke table-mounting holes. Export SVG for a dimensionally scaled 2D diagram.
@@ -57,7 +57,7 @@ The coordinate origin is the lower-left of the plate. +X points right, +Y up; ro
 
 - Beam lines are editable connection guides, **not** a ray tracer or an optical alignment solver. Lenses do not focus simulated rays and mirror rotations do not automatically redirect paths.
 - The 2D envelopes are approximate visual bounds, not vendor-verified collision volumes. The UI flags overlapping envelopes, plate-edge proximity, and insufficient material below a recessed mount. It does not certify hardware clearances, hole interference, thread engagement, tool access, or machining tolerances.
-- Detailed plate rendering and exports use native library cutters. Fast preview intentionally omits machining details. No simplified replacement holes are substituted. Inspect output before machining; STL describes geometry, not tapping or a CNC toolpath.
+- Detailed plate rendering and exports use native library cutters. The 3D plate always includes machining details. No simplified replacement holes are substituted. Inspect output before machining; STL describes geometry, not tapping or a CNC toolpath.
 - The supplied source collection is imported offline by `scripts/import-projects.mjs`; arbitrary SCAD upload is not supported. JSON files from this editor are the round-trip format.
 - Vendor STL parts may contain non-manifold geometry. Assembly view is for inspection; the separate plate export is the fabrication artifact.
 - Projects stay on the device. No login, backend, or uploaded layout data is needed.
@@ -110,3 +110,7 @@ To add a mount, verify the source module's optical origin, rotation, `show`/`dri
 - [OpenSCAD WASM](https://github.com/openscad/openscad-wasm) makes client-side CAD possible.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency versions and provenance. No blanket license is asserted over the supplied CAD/vendor assets.
+
+### Interface language and example descriptions
+
+The interface defaults to Simplified Chinese. Use the header language selector to switch to English; the choice persists on this browser. Project names, filenames, part numbers, and user-entered labels are retained. All 44 starters have short bilingual descriptions in `project-descriptions.js`.
