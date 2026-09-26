@@ -21,6 +21,10 @@ jobs:
       - run: node --test tests/*.test.mjs
       - run: node tests/render-smoke.mjs --all
       - run: node tests/render-smoke.mjs --expanded
+      - run: node tests/project-cad-smoke.mjs
+      - run: node tests/project-cad-smoke.mjs --render --project=simple_example
+      - run: node tests/project-cad-smoke.mjs --render --project=weebay_rack--rack_doublepass_aom
+      - run: node tests/project-cad-smoke.mjs --render --project=satabs
       - run: node scripts/build-mount-scenes.mjs
       - run: git diff --exit-code cad/mount-scenes.json
       - uses: actions/configure-pages@v5

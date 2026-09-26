@@ -13,7 +13,7 @@ function serialize(n){if(n.name==='import')return 'group();';return n.line+(n.li
 function collect(n,m,items){if(n.name==='multmatrix')m=mul(m,JSON.parse(n.line.slice(11,n.line.lastIndexOf(')'))));if(n.name==='difference'||n.name==='intersection'){assert.ok(!hasImport(n),`Imported hardware inside ${n.name} needs an explicit preview adapter.`);return;}if(n.name==='import'){const file=JSON.parse(n.line.match(/file = ("[^"]+")/)[1]).replace(/^\//,'');items.push({kind:'stl',file,matrix:m});}else n.children.forEach(c=>collect(c,m,items));}
 await mkdir(new URL('../cad/generated/',import.meta.url),{recursive:true});
 const output={};
-for(const part of catalog){
+for(const part of catalog.filter(p=>!p.sourceAsset)){
  const {oc,logs}=await engine();oc.FS.writeFile('/input.scad',`use <c4po-web.scad>; $fn=48; ${cadCall(part,String(part.previewDz??0),'true','false')}`);
  assert.equal(oc.callMain(['/input.scad','-o','/mount.csg']),0);
  assert.ok(!logs.some(l=>/^(WARNING|ERROR):/.test(l)),`${part.id}: ${logs.join('\n')}`);
@@ -26,4 +26,4 @@ for(const part of catalog){
  }
  assert.ok(items.length,`No preview geometry for ${part.id}`);output[part.id]=items;console.log(`${part.id}: ${items.length} mesh(es)`);
 }
-await writeFile(new URL('../cad/mount-scenes.json',import.meta.url),JSON.stringify(output,null,2)+'\n');console.log(`Extracted exact hardware transforms for ${catalog.length} assemblies.`);
+await writeFile(new URL('../cad/mount-scenes.json',import.meta.url),JSON.stringify(output,null,2)+'\n');console.log(`Extracted exact hardware transforms for ${catalog.filter(p=>!p.sourceAsset).length} assemblies.`);

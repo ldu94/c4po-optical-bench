@@ -1,13 +1,13 @@
 import {createOpenSCAD} from '../vendor/openscad/openscad.js';
-import {example,scad,catalog,cadFiles,doublePassExample} from '../model.js';
+import {example,scad,catalog,cadFiles,doublePassExample,layoutCadFiles} from '../model.js';
 import {readFile,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const layout=process.argv.includes("--double-pass")?doublePassExample():example();if(process.argv.includes('--all'))layout.components=catalog.slice(0,6).map((c,i)=>({id:c.id,type:c.id,label:c.name,x:35+(i%3)*80,y:40+Math.floor(i/3)*90,angle:i*30}));
-if(process.argv.includes('--expanded')){layout.plate.width=900;layout.plate.height=900;layout.components=catalog.map((c,i)=>({id:c.id,type:c.id,label:c.name,x:100+(i%4)*200,y:100+Math.floor(i/4)*160,angle:0}));}
+if(process.argv.includes('--expanded')){layout.plate.width=900;layout.plate.height=900;layout.components=catalog.filter(p=>!p.sourceAsset).map((c,i)=>({id:c.id,type:c.id,label:c.name,x:100+(i%4)*200,y:100+Math.floor(i/4)*160,angle:0}));}
 layout.connections=[];
 const assembly=false;
-const logs=[];const api=await createOpenSCAD({print:t=>logs.push(t),printErr:t=>logs.push(t)}),oc=api.getInstance();oc.FS.mkdir('/thorlabs');
-for(const file of cadFiles)oc.FS.writeFile('/'+file,await readFile(new URL('../cad/'+file,import.meta.url)));
+const logs=[];const api=await createOpenSCAD({print:t=>logs.push(t),printErr:t=>logs.push(t)}),oc=api.getInstance();for(const dir of ['/thorlabs','/projects','/project-meshes'])oc.FS.mkdir(dir);
+for(const file of layoutCadFiles(layout))oc.FS.writeFile('/'+file,await readFile(new URL('../cad/'+file,import.meta.url)));
 oc.FS.writeFile('/layout.scad',scad(layout,assembly));const code=oc.callMain(['/layout.scad','-o','/plate.stl']);
 console.log(logs.join('\n'));assert.equal(code,0);assert.ok(!logs.some(t=>/^(ERROR|WARNING):/.test(t)),logs.join('\n'));
 const result=oc.FS.readFile('/plate.stl');assert.ok(result.length>1000);await writeFile('/tmp/ike-'+(assembly?'assembly':'plate')+'.stl',result);console.log(`Render successful: ${result.length} bytes`);

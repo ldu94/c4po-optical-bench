@@ -1,0 +1,272 @@
+[
+  {
+    "source": "thorlabs/POLARIS-C05G-Solidworks.stl",
+    "asset": "thorlabs/POLARIS-C05G-Solidworks.stl",
+    "originalSha256": "2cd703ee3039fcaa0346d0e4e748641f9b19b9428250f99ec22721674e5c75b8",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/RSP05-Solidworks.stl",
+    "asset": "thorlabs/RSP05-Solidworks.stl",
+    "originalSha256": "d5f4ccbea6c5f9a272780a59846a135b2263ea02b384d741617d2c8cd17e6122",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-K05S1-Solidworks.stl",
+    "asset": "thorlabs/POLARIS-K05S1-Solidworks.stl",
+    "originalSha256": "6e674a1cd6ad8f3ad459ccb271eec393184cd4a5f7ca4e6b400b472d7dc5e8f3",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/HCA3-Solidworks.stl",
+    "asset": "thorlabs/HCA3-Solidworks.stl",
+    "originalSha256": "4d5410ceb7739a497f645e1eed4c9d8a66f8ae0c87564fa940b4c28c9c131463",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM100PM-Solidworks-modified.stl",
+    "asset": "thorlabs/KM100PM-Solidworks-modified.stl",
+    "originalSha256": "8933754960e7a21bf6a2039db785aecde1343c3de93156ae863bdfe1d051a0ee",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/CP02-Solidworks.stl",
+    "asset": "thorlabs/CP02-Solidworks.stl",
+    "originalSha256": "e73cf8239e42be4578fa196bb016bcab121650533ec05f68e31dc3a4eb3f2251",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/IDA12-P5-Solidworks.stl",
+    "asset": "thorlabs/IDA12-P5-Solidworks.stl",
+    "originalSha256": "605ae5e27f38ca7c56a337958bddab9515d5f27d51295be2e476b30d7947a4d6",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-K05S2-Solidworks.stl",
+    "asset": "thorlabs/POLARIS-K05S2-Solidworks.stl",
+    "originalSha256": "d3dde4899f44f508c7a7381f18e0521e3e13ef2d1d0012d0fca9a578020da1e6",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/PM3-Solidworks.stl",
+    "asset": "project-meshes/f6dbfe52f1aee00e.stl",
+    "originalSha256": "f6dbfe52f1aee00e91dfdd679b76dc2fe26afba9d537bf11b9c5aac430d3df3f",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-L05G-Solidworks.stl",
+    "asset": "thorlabs/POLARIS-L05G-Solidworks.stl",
+    "originalSha256": "51fd52741f753c2c78e751e035ca20e2fc49dcebf9be0f6f8b1bf1e3f7332a38",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/PAF2-2A-Solidworks.stl",
+    "asset": "project-meshes/3a876dedbdd1a365.stl",
+    "originalSha256": "3a876dedbdd1a36538283f4f52789ba2ce401953c3d662581d86a4bb5d330f0f",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/HCP-Solidworks.stl",
+    "asset": "project-meshes/22f1015089bbcc4c.stl",
+    "originalSha256": "22f1015089bbcc4c01678a23ab1fd057724f6f3770c7ffd9dc53a235df5d2ec0",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/MK05-Solidworks.stl",
+    "asset": "project-meshes/c1e3803d9900147d.stl",
+    "originalSha256": "c1e3803d9900147d3717a096c097e3ad97cb4b941b44b7daaefa3b69ea4e8cd1",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/MLH05-Solidworks.stl",
+    "asset": "project-meshes/b220e7803e25015a.stl",
+    "originalSha256": "b220e7803e25015a2f9277ce9e14b8844d3cc7ceb7c9151d6593ed8161de854e",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/RSP1-Solidworks.stl",
+    "asset": "thorlabs/RSP1-Solidworks.stl",
+    "originalSha256": "3c1a3de6216a0c821ccf5512ba8ca4131fa8dd46acf74cc9b196bda8273001ca",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM100-Solidworks.stl",
+    "asset": "thorlabs/KM100-Solidworks.stl",
+    "originalSha256": "24aaef6ad65f57e5af8c59d76e50a5cab60a49f1ea6222ca21c509e131d9dacd",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM200PM-Solidworks.stl",
+    "asset": "project-meshes/8045053723fcd9ea.stl",
+    "originalSha256": "8045053723fcd9ea39352e1b7ebe3beee6ee344c063ed3a67b3c13e6c6134a7e",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/LMR1-Solidworks.stl",
+    "asset": "thorlabs/LMR1-Solidworks.stl",
+    "originalSha256": "40e99e0d85bcebec643e97020b52126cc8a5046fd4cb09ddc409cda30f3a7419",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/IDA15-P5-Solidworks.stl",
+    "asset": "project-meshes/11f1aa53c92f5552.stl",
+    "originalSha256": "11f1aa53c92f55526861adfcde9bf624c75e3da13bd8aaa8ea1967bfcb59097f",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM100PM-Solidworks.stl",
+    "asset": "project-meshes/5c4357487da59dec.stl",
+    "originalSha256": "5c4357487da59dec506ec6aec6c9b0444a76208b344e34b5a94fdbf8fc8f3523",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM05-Solidworks.stl",
+    "asset": "project-meshes/ac9e86d53c1977a4.stl",
+    "originalSha256": "ac9e86d53c1977a46b440273309358aec6ee4861bb8a046acca7216af0c3d18f",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/LMR05-Solidworks.stl",
+    "asset": "project-meshes/158538cba85a6549.stl",
+    "originalSha256": "158538cba85a6549c2ecba0f444d85334e7034d513577a8184ea9582eb82e2e4",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/DET10A2-Solidworks.stl",
+    "asset": "thorlabs/DET10A2-Solidworks.stl",
+    "originalSha256": "1fd1ce2154d82956749f78930bed1eb1b90197c465736d8f01094235d2e78ae7",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/LDM21-Solidworks.stl",
+    "asset": "project-meshes/5d21035aae96c210.stl",
+    "originalSha256": "5d21035aae96c2107748bd9681ff82912dd4cb5e5e38fc83607e6acb8e65595a",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/CP35-Solidworks.stl",
+    "asset": "project-meshes/2eae8c6078bae007.stl",
+    "originalSha256": "2eae8c6078bae0073eb65ac4372437f063c3511cd1e91b1551d1ba71c73a0795",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-B05G-Solidworks.stl",
+    "asset": "project-meshes/4f3ce5413d4a9be8.stl",
+    "originalSha256": "4f3ce5413d4a9be8f567e641e981fbb43d9c25d292fc569810c3915acb6162b5",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/SM1TC-Solidworks.stl",
+    "asset": "project-meshes/b1d119ae60cad0b5.stl",
+    "originalSha256": "b1d119ae60cad0b54d8af0796f781a1512a5e2381c0ce8552ab04269ceaebb80",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/SM1L05-Solidworks.stl",
+    "asset": "project-meshes/19fabeefd2a9e9de.stl",
+    "originalSha256": "19fabeefd2a9e9de90d4d15c6e25bf4c155e3b9d33d0f56ab0b152fa9723c6e4",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-K05G4-Solidworks.stl",
+    "asset": "project-meshes/51dd5e861def0f23.stl",
+    "originalSha256": "51dd5e861def0f23283f7eca7106c492c851bb241592f3edd1dfb8247ff2eb68",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-K05T2-Solidworks.stl",
+    "asset": "project-meshes/fea32e0877ef63f6.stl",
+    "originalSha256": "fea32e0877ef63f60d1adc9d11c5690c3908fb0cc52a634ff3b40a6c5973ffd3",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/POLARIS-B05S.stl",
+    "asset": "project-meshes/6ce3ddd9790ef7cb.stl",
+    "originalSha256": "6ce3ddd9790ef7cbdc8ea3b3d974f9150678c795d202f6a1178c912e30af929f",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/IO-3D-850-VLP-Step.stl",
+    "asset": "thorlabs/IO-3D-850-VLP-Step.stl",
+    "originalSha256": "64f27d4f5a1bc904bfbe0199667c4f680446e8a225a10cd9855748bf13db6066",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM100PM-noplatform2.stl",
+    "asset": "thorlabs/KM100PM-noplatform2.stl",
+    "originalSha256": "78b0d4517342a4c65f2d07e47d3b26f9f868a9761ceb57b769e4585866484391",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/PBS102-Solidworks.stl",
+    "asset": "project-meshes/b690785c8e6091de.stl",
+    "originalSha256": "b690785c8e6091de005fa8227e23d261abc728163031fea6f064df42efbe155e",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/MRA12-P01-Solidworks.stl",
+    "asset": "project-meshes/0f016535f3619ff0.stl",
+    "originalSha256": "0f016535f3619ff0fde25a85805b54c2ec38cce86fdf9b29a59033d81413b120",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/GC25075-RB-Solidworks.stl",
+    "asset": "project-meshes/1e79b7c677ed033a.stl",
+    "originalSha256": "1e79b7c677ed033a4ad4d376226fe42040c7e054359e20bd090fe90c6b66b8fa",
+    "packed": false
+  },
+  {
+    "source": "newport/Newport-M05.STL",
+    "asset": "project-meshes/8c26d614d50b5fcb.stl",
+    "originalSha256": "8c26d614d50b5fcb1ecf13408143de1dbdbe59750254eca198769e6082533c15",
+    "packed": false
+  },
+  {
+    "source": "fiberport_12mm.stl",
+    "asset": "project-meshes/df17d89e4b9a48ed.stl",
+    "originalSha256": "df17d89e4b9a48edd1c71a81b821985af1660fc2a2f38902bb5178dcbf2831f9",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/FCPC_Fiber-Solidworks.stl",
+    "asset": "project-meshes/9bab4282f1d76917.stl",
+    "originalSha256": "9bab4282f1d76917dfc11e87c4c388fe11899ecb875d7fa817005cebd8a95e22",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/camera_shutter_mount_with_elec.stl",
+    "asset": "project-meshes/f07b72dcbe3701d3.stl",
+    "originalSha256": "f07b72dcbe3701d3d4c66a588de8df01591c82bcc0d0959875c3e86e7cfd7a64",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/IO-3-488-HP-NO_OUTPUT-Solidworks.STL",
+    "asset": "project-meshes/b5c97e450f98ff48.stl",
+    "originalSha256": "b5c97e450f98ff480ba113d4a43d9869bacb2124a023ec1efa8958b88902c04b",
+    "packed": false
+  },
+  {
+    "source": "thorlabs/KM05S-Solidworks.STL",
+    "asset": "project-meshes/d2bc0eb0c3368105.stl",
+    "originalSha256": "d2bc0eb0c3368105e386a33364d575ec09330c7e89a262c33f2f39839604e48e",
+    "packed": false
+  },
+  {
+    "source": "weebay_rack/km05s_to_atm_adapter.STL",
+    "asset": "project-meshes/3e52fa2bd7dde6bd.stl",
+    "originalSha256": "3e52fa2bd7dde6bd89fcec276fab84956ac3fb075e18e7bdf50233defabb3b66",
+    "packed": false
+  },
+  {
+    "source": "AOMs/atm-a1.STL",
+    "asset": "project-meshes/eab5a430661440e8.stl",
+    "originalSha256": "eab5a430661440e817ab8ad85f17e5542ec75f010e426e262c52d53f22ae28a3",
+    "packed": false
+  },
+  {
+    "source": "AOMs/twp5m1-vis.STL",
+    "asset": "project-meshes/1a0c1d500373718c.stl",
+    "originalSha256": "1a0c1d500373718c9652457ff4e99cef41adf95111790dfcdca3a7320e2142dc",
+    "packed": false
+  }
+]

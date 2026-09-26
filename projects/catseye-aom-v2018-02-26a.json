@@ -1,0 +1,572 @@
+{
+  "version": 2,
+  "name": "catseye aom v2018 02 26a",
+  "view": {
+    "showBeams": true,
+    "showMounts": true
+  },
+  "plate": {
+    "width": 360,
+    "height": 130,
+    "thickness": 20,
+    "beamHeight": 12.7,
+    "grid": 12.7,
+    "snap": 0,
+    "cornerHoles": false
+  },
+  "components": [
+    {
+      "id": "part-0",
+      "type": "src-e0452efa9df512d9",
+      "label": "fiberport with holder 1",
+      "x": 32,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "src-23557cfd926ea5f0",
+      "label": "rsp1 2",
+      "x": 92,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "src-23557cfd926ea5f0",
+      "label": "rsp1 3",
+      "x": 132,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "src-736749981cfa7e81",
+      "label": "km100 4",
+      "x": 182,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "src-3d753a4334de9045",
+      "label": "prism on mount km200pm 5",
+      "x": 182,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "src-624d1b7e371f78f5",
+      "label": "lmr1 6",
+      "x": 87,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-6",
+      "type": "src-3ef07d2ba3ff826f",
+      "label": "ida15 7",
+      "x": 67,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-7",
+      "type": "src-23557cfd926ea5f0",
+      "label": "rsp1 8",
+      "x": 47,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-8",
+      "type": "src-22f1d583fed86f7e",
+      "label": "km100 9",
+      "x": 22,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-9",
+      "type": "src-3ef07d2ba3ff826f",
+      "label": "ida15 10",
+      "x": 232,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-10",
+      "type": "src-8a0ea5dc0f317008",
+      "label": "km100 11",
+      "x": 262,
+      "y": 100,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-11",
+      "type": "src-c72a70e65e15fccd",
+      "label": "km100 12",
+      "x": 262,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-12",
+      "type": "src-23557cfd926ea5f0",
+      "label": "rsp1 13",
+      "x": 292,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-13",
+      "type": "src-e0452efa9df512d9",
+      "label": "fiberport with holder 14",
+      "x": 352,
+      "y": 30,
+      "z": 21.3,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "connections": [
+    [
+      "part-0",
+      "part-1"
+    ],
+    [
+      "part-1",
+      "part-2"
+    ],
+    [
+      "part-2",
+      "part-3"
+    ],
+    [
+      "part-3",
+      "part-4"
+    ],
+    [
+      "part-8",
+      "part-7"
+    ],
+    [
+      "part-7",
+      "part-6"
+    ],
+    [
+      "part-6",
+      "part-5"
+    ],
+    [
+      "part-5",
+      "part-4"
+    ],
+    [
+      "part-4",
+      "part-9"
+    ],
+    [
+      "part-9",
+      "part-10"
+    ],
+    [
+      "part-11",
+      "part-10"
+    ],
+    [
+      "part-11",
+      "part-12"
+    ],
+    [
+      "part-12",
+      "part-13"
+    ]
+  ],
+  "project": {
+    "id": "catseye-aom-v2018-02-26a",
+    "source": "catseye-aom-v2018-02-26a.scad",
+    "notes": [
+      "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+      "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+      "Source dependency warnings: WARNING: Ignoring unknown module 'aom_on_mount_km200pm' in file /catseye-aom-v2018-02-26a.scad, line 86 WARNING: Ignoring unknown module 'aom_on_mount_km200pm' in file /catseye-aom-v2018-02-26a.scad, line 86"
+    ]
+  }
+}

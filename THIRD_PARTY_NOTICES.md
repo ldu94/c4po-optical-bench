@@ -30,3 +30,9 @@ STL filename extensions are normalized to the spelling referenced by the source 
 ## Optical-Paths
 
 https://github.com/WindSweeps/Optical-Paths was consulted as a user-requested interface reference. No source files, icons, or artwork from it were copied.
+
+## Imported project templates
+
+The `projects/` designs and `cad/project-geometry.json` component cutters are derived from the same user-supplied c4po folder. The original sources remain unchanged. `scripts/import-projects.mjs` documents the limited compatibility transformations applied during evaluation. `PROJECT_IMPORTS.md` lists the source files and exclusions.
+
+`cad/project-provenance.json` maps preview assets to their original filenames and SHA-256 hashes. Existing vendor assets are reused. Some ASCII STL files are repacked into binary STL for efficient loading, preserving triangle order and coordinates to within 0.001 mm. These are derived representations, not newly authored or relicensed hardware designs.

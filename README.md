@@ -7,12 +7,22 @@ A visual editor for optical layouts and recessed base plates, built on the exist
 1. Drag a component from the library onto the plate, or click its card.
 2. Select it to enter X, Y, and counterclockwise rotation in millimeters/degrees. Use **R** to rotate 15° (Shift reverses), arrow keys to nudge, and Delete to remove.
 3. Set plate dimensions, thickness, grid spacing, and snapping. **Connect beam** joins optical centers; Escape exits. Double-click a guide to remove it.
-4. Open **3D model**. OpenSCAD runs in a worker and generates the real plate, including screw holes, alignment pins/slots, and recessed seats defined by c4po. Enable **Show actual mounts** to display the supplied hardware meshes at transforms extracted from c4po by OpenSCAD. Hardware meshes are displayed separately, so non-closed vendor meshes do not break the plate renderer. Rendering can take tens of seconds; the editor stays responsive and supports cancellation.
+4. Open **3D preview** for an immediate unrendered view. It uses a plain plate blank and cached hardware meshes; moving components or changing the plate does **not** run OpenSCAD. Plate holes and recesses are omitted, and imported procedural parts are shown without boolean subtraction. **Render detailed plate** runs OpenSCAD only when requested. **Use fast preview** cancels a render and returns to the blank; geometry edits also return to fast preview. Exact results are cached for reuse, including STL export. Hardware previews load on demand, so a large project's first visit may take longer than subsequent edits.
 5. **Export plate STL** always downloads the plate alone, in millimeters. **Download OpenSCAD** produces an assembly source file for desktop OpenSCAD; place it in your original c4po folder next to `thorlabs_optomech.scad`, `aom_optomech.scad`, `util.scad`, and the `thorlabs` folder. Set `show_components=false` to render only the plate there.
 6. **Save design…** opens your named design library. Save multiple designs in the browser, or download JSON files and use **Open design** to restore them. In browsers offering the File System Access API (such as desktop Chrome/Edge), use **Save design as…** or **Choose folder…** to work directly in a local directory. **Update opened file** saves changes to the associated file. The app remembers a chosen folder when browser permissions allow it; otherwise choose it again next session. Other browsers use JSON download/open. Components, positions, rotations, connections, plate settings, and viewer options all round-trip. Older version-1 files remain supported. The latest working draft is also saved automatically in this browser.
 7. Toggle **Show optical beams** in 3D to show/hide connection guides in both views. Use **Load double-pass AOM example** for an editable starter based on `doublepass_aom.scad`. Undo restores your previous layout. This starter imports component placement and beam connections, not the source's optional cuts, labels, or bespoke table-mounting holes. Export SVG for a dimensionally scaled 2D diagram.
 
 Undo/redo: Ctrl/Cmd Z and Ctrl/Cmd Shift Z. Scroll to zoom the plan; drag empty space to pan. **Fit view** resets the camera. The 3D viewer supports orbit, zoom, and right-drag panning.
+
+## Example project library
+
+**Example projects…** opens 43 imported optical templates plus the guided double-pass example. Search by filename/name or filter by family. The collection covers the local cat's-eye and double-pass variants, fiber noise, injection locking, noise eater, mixers, splitter trees, spectroscopy, and the `weebay_rack` optical layouts. Loading a template is undoable. Its component variants can be moved, rotated, duplicated, removed, saved, and reopened.
+
+Templates are **editable starting layouts**, not copies of complete fabrication drawings. The importer evaluates the native modules, keeps their placements and component cutters, and places them on an enclosing rectangular blank. Custom plate outlines, table-mounting holes, labels, and fixtures outside component modules are omitted. Native support geometry and component elevations are retained relative to the blank; its top is normalized to Z=−12.7 mm. Rotation edits are additional rotations of the imported source orientation. Component envelopes and 2D symbols are approximate. Original beam segments are linked only when they pass through known component origins; other beam segments are omitted.
+
+Read each template's **Import notes**, also retained in saved designs. Three legacy cat's-eye files reference AOM modules that are absent from the supplied library. Their templates explicitly report the missing modules. `splitter_tree_5port.scad` contains unresolved merge conflicts; both source sides are provided as separate review-required alternatives. Chamber/flange/stage projects and individual adapter/label files are listed under **Other source files and exclusions**. The oversized combined rack scene is excluded; its individual optical projects are included. See [PROJECT_IMPORTS.md](PROJECT_IMPORTS.md) for the full inventory.
+
+The source folder is never modified. Template generation uses temporary compatibility fixes: repeated commas and a digit-prefixed identifier are normalized; AOM/rubidium-holder dependencies are joined; the rack double-pass dependency alias is resolved; and the vapor-cell display mesh is guarded by its show flag so non-manifold display geometry is not used as a plate cutter.
 
 ## Supported mounts
 
@@ -24,7 +34,6 @@ Undo/redo: Ctrl/Cmd Z and Ctrl/Cmd Shift Z. Scroll to zoom the plan; drag empty 
 | POLARIS-L05G | `lens_holder_l05g` |
 | LMR1 | `lens_holder_lmr1` |
 | IDA12 | `pinhole_ida12` (direct mounting, no surface adapter) |
-
 | Isomet 1205C / KM100PM | `isomet_on_mount_km100pm` |
 | Brimrose TEF-80-40 / KM100PM | `brimrose_on_mount_km100pm` |
 | Gooch & Housego 3080 / KM100PM | `gooch_housego_3080_on_mount_km100pm` (optical origin corrected by −33 mm X) |
@@ -42,14 +51,14 @@ The PBS skate adapter and sliding iris bracket require **12.7 mm** beam height. 
 
 The catalog uses recessed seats with a beam height of **5–12.7 mm above the plate**. Larger beam heights and automatically generated raised posts are not implemented. The default plate is 260 × 180 × 25.4 mm, with a 12.7 mm beam height. Four optional corner holes are 6.604 mm clearance bores, placed 12.7 mm from the plate edges. Grid dots are positioning references, not additional drilled holes. Component holes retain the original library's imperial hardware sizes.
 
-The coordinate origin is the lower-left of the plate. +X points right, +Y up; rotations are counterclockwise about the optical center. Optical centers lie at Z=0 in CAD, with the plate top at `-beamHeight`.
+The coordinate origin is the lower-left of the plate. +X points right, +Y up; rotations are counterclockwise about the optical center. New catalog components have optical centers at Z=0 in CAD, with the plate top at `-beamHeight`. Imported components may retain other source elevations and fixed source orientations.
 
 ## Scope and mechanical checks
 
 - Beam lines are editable connection guides, **not** a ray tracer or an optical alignment solver. Lenses do not focus simulated rays and mirror rotations do not automatically redirect paths.
 - The 2D envelopes are approximate visual bounds, not vendor-verified collision volumes. The UI flags overlapping envelopes, plate-edge proximity, and insufficient material below a recessed mount. It does not certify hardware clearances, hole interference, thread engagement, tool access, or machining tolerances.
-- The 3D renderer and exports use the original library geometry. No simplified replacement holes are substituted. Inspect output before machining; STL describes geometry, not tapping or a CNC toolpath.
-- Arbitrary existing SCAD layouts are not parsed into editable projects. JSON files from this editor are the round-trip format.
+- Detailed plate rendering and exports use native library cutters. Fast preview intentionally omits machining details. No simplified replacement holes are substituted. Inspect output before machining; STL describes geometry, not tapping or a CNC toolpath.
+- The supplied source collection is imported offline by `scripts/import-projects.mjs`; arbitrary SCAD upload is not supported. JSON files from this editor are the round-trip format.
 - Vendor STL parts may contain non-manifold geometry. Assembly view is for inspection; the separate plate export is the fabrication artifact.
 - Projects stay on the device. No login, backend, or uploaded layout data is needed.
 
@@ -65,7 +74,7 @@ Open `http://127.0.0.1:8765`. Serve over HTTP/HTTPS rather than opening `index.h
 
 ## GitHub Pages
 
-The app uses relative asset URLs and works under a project path such as `/c4po-optical-bench/`. In repository Settings → Pages, choose **GitHub Actions**. The included workflow tests the layout model and renders plates covering all 18 component types, then deploys the static files on a push to `main`.
+The app uses relative asset URLs and works under a project path such as `/c4po-optical-bench/`. In repository Settings → Pages, choose **GitHub Actions**. The included workflow tests the layout model and renders plates covering all 18 component types, compiles all imported project plates and renders representative source templates, then deploys the static files on a push to `main`.
 
 OpenSCAD WebAssembly and Three.js are pinned and vendored so a deployed page has no external runtime CDN dependency. WebAssembly runs in a regular module worker; no cross-origin isolation headers or server compute are needed.
 
@@ -77,6 +86,8 @@ OpenSCAD WebAssembly and Three.js are pinned and vendored so a deployed page has
 - `viewer.js`: Three.js plate and hardware inspection.
 - `scripts/build-mount-scenes.mjs`: regenerates `cad/mount-scenes.json` by evaluating the original c4po modules to CSG with OpenSCAD. This preserves their exact vendor-mesh transforms without expensive unions of vendor meshes or requiring watertight hardware meshes. Procedural geometry (AOM bodies, optics, adapters) is rendered separately to `cad/generated/`, preserving its native boolean geometry.
 - `cad/`: unchanged copies of three local c4po library files and selected hardware meshes, plus a dependency bridge, generated procedural meshes, and their scene manifest.
+- `projects/`, `project-parts.js`, and `cad/project-*.json`: versioned templates, native component variants, preview scenes, geometry bundle, and provenance. `cad/projects/` is ignored importer scratch space; its contents are published in `project-geometry.json`.
+- `scripts/import-projects.mjs`: regenerates the template collection from the adjacent original CAD folder. It uses OpenSCAD CSG evaluation, without running expensive mesh booleans.
 - `vendor/`: pinned OpenSCAD WASM 0.0.4 and Three.js 0.180.0.
 
 ```sh
@@ -84,6 +95,10 @@ node --test tests/*.test.mjs
 node tests/render-smoke.mjs --all
 node tests/render-smoke.mjs --expanded
 node scripts/build-mount-scenes.mjs
+node tests/project-cad-smoke.mjs
+node tests/project-cad-smoke.mjs --render --project=simple_example
+# Requires the original source folder adjacent to web/:
+node scripts/import-projects.mjs
 ```
 
 To add a mount, verify the source module's optical origin, rotation, `show`/`drill` behavior, beam-height constraints, and dependencies. Add its catalog entry and required assets, then validate both plate and assembly rendering. Do not assume every c4po module shares the same parameter semantics.

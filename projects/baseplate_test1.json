@@ -1,0 +1,168 @@
+{
+  "version": 2,
+  "name": "baseplate test1",
+  "view": {
+    "showBeams": true,
+    "showMounts": true
+  },
+  "plate": {
+    "width": 56,
+    "height": 50,
+    "thickness": 25.4,
+    "beamHeight": 12.7,
+    "grid": 12.7,
+    "snap": 0,
+    "cornerHoles": false
+  },
+  "components": [
+    {
+      "id": "part-0",
+      "type": "src-f4ce7bc05770efba",
+      "label": "ida12 1",
+      "x": 23,
+      "y": 25,
+      "z": 0.02,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "src-dd518e9512d783e6",
+      "label": "c05g 2",
+      "x": 34,
+      "y": 25,
+      "z": 0.02,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "src-dd518e9512d783e6",
+      "label": "c05g 3",
+      "x": 34,
+      "y": 5,
+      "z": 0.02,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "src-b12e5449f08498cd",
+      "label": "dmm05 with slider mount 4",
+      "x": 9,
+      "y": 35,
+      "z": 0.02,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "connections": [],
+  "project": {
+    "id": "baseplate_test1",
+    "source": "baseplate_test1.scad",
+    "notes": [
+      "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+      "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+    ]
+  }
+}

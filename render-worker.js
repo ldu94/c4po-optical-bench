@@ -1,13 +1,14 @@
+import {projectGeometry} from './projects.js';
 import {createOpenSCAD} from './vendor/openscad/openscad.js';
-import {scad,cadFiles} from './model.js';
+import {scad,layoutCadFiles} from './model.js';
 self.onmessage=async ({data})=>{
  const logs=[];
  try{
   self.postMessage({status:'Loading OpenSCAD…'});
   const api=await createOpenSCAD({print:t=>logs.push(t),printErr:t=>logs.push(t)}),instance=api.getInstance();
-  const files=cadFiles;
-  instance.FS.mkdir('/thorlabs');
-  await Promise.all(files.map(async f=>{const r=await fetch('./cad/'+f);if(!r.ok)throw Error(`Cannot load CAD library: ${f}`);instance.FS.writeFile('/'+f,new Uint8Array(await r.arrayBuffer()));}));
+  const files=layoutCadFiles(data.layout),bundle=files.some(f=>f.startsWith('projects/'))?await projectGeometry():{};
+  for(const dir of ['/thorlabs','/projects','/project-meshes'])instance.FS.mkdir(dir);
+  await Promise.all(files.map(async f=>{if(bundle[f]!==undefined){instance.FS.writeFile('/'+f,bundle[f]);return;}const r=await fetch('./cad/'+f);if(!r.ok)throw Error(`Cannot load CAD library: ${f}`);instance.FS.writeFile('/'+f,new Uint8Array(await r.arrayBuffer()));}));
   self.postMessage({status:'Cutting mounting holes and recesses…'});
   instance.FS.writeFile('/layout.scad',scad(data.layout,false));
   const code=instance.callMain(['/layout.scad','-o','/plate.stl']);

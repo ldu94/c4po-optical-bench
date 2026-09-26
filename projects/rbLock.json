@@ -1,0 +1,601 @@
+{
+  "version": 2,
+  "name": "rbLock",
+  "view": {
+    "showBeams": true,
+    "showMounts": true
+  },
+  "plate": {
+    "width": 278.4,
+    "height": 127,
+    "thickness": 25.4,
+    "beamHeight": 12.7,
+    "grid": 12.7,
+    "snap": 0,
+    "cornerHoles": false
+  },
+  "components": [
+    {
+      "id": "part-0",
+      "type": "src-f5b492fdb2fbdbdf",
+      "label": "fiberport sidemount 1",
+      "x": 20,
+      "y": 127,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "src-91669d3069649bda",
+      "label": "b05g 2",
+      "x": 20,
+      "y": 16,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "src-a35a1679cd5c4cbc",
+      "label": "rsp05 3",
+      "x": 20,
+      "y": 70,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "src-f0075b16fa7267a5",
+      "label": "rbOven 4",
+      "x": 173,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "src-074e40c89059403e",
+      "label": "periscope base 5",
+      "x": 53,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "src-074e40c89059403e",
+      "label": "periscope base 6",
+      "x": 258,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-6",
+      "type": "src-847549907caa02dc",
+      "label": "k05s2 7",
+      "x": 243,
+      "y": 16,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-7",
+      "type": "src-03543599a7e93262",
+      "label": "k05s2 8",
+      "x": 243,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-8",
+      "type": "src-3b474f63c19d678c",
+      "label": "k05s2 9",
+      "x": 106,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-9",
+      "type": "src-12ccf812a566d6ec",
+      "label": "pd pda10a 10",
+      "x": 106,
+      "y": 42,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-10",
+      "type": "src-3b474f63c19d678c",
+      "label": "k05s2 11",
+      "x": 212.844,
+      "y": 63,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-11",
+      "type": "src-42612cbe3fecf5e2",
+      "label": "c05g 12",
+      "x": 86,
+      "y": 63,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-12",
+      "type": "src-b6ca91d9ba085589",
+      "label": "pbs on skate mount 13",
+      "x": 86,
+      "y": 110,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-13",
+      "type": "src-26bfd99178e5d162",
+      "label": "l05g 14",
+      "x": 197.844,
+      "y": 63,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-14",
+      "type": "src-26bfd99178e5d162",
+      "label": "l05g 15",
+      "x": 145.844,
+      "y": 63,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "connections": [
+    [
+      "part-0",
+      "part-2"
+    ],
+    [
+      "part-2",
+      "part-1"
+    ],
+    [
+      "part-1",
+      "part-6"
+    ],
+    [
+      "part-6",
+      "part-7"
+    ],
+    [
+      "part-7",
+      "part-5"
+    ],
+    [
+      "part-12",
+      "part-8"
+    ],
+    [
+      "part-8",
+      "part-9"
+    ],
+    [
+      "part-10",
+      "part-13"
+    ],
+    [
+      "part-13",
+      "part-14"
+    ],
+    [
+      "part-14",
+      "part-11"
+    ],
+    [
+      "part-11",
+      "part-12"
+    ],
+    [
+      "part-12",
+      "part-4"
+    ]
+  ],
+  "project": {
+    "id": "rbLock",
+    "source": "rbLock.scad",
+    "notes": [
+      "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+    ]
+  }
+}

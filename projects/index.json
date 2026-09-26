@@ -1,0 +1,1191 @@
+{
+  "projects": [
+    {
+      "id": "2_output_doublepass",
+      "name": "2 output doublepass",
+      "source": "2_output_doublepass.scad",
+      "category": "AOM layouts",
+      "components": 33,
+      "width": 279.4,
+      "height": 152.4,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "3_output_doublepass",
+      "name": "3 output doublepass",
+      "source": "3_output_doublepass.scad",
+      "category": "AOM layouts",
+      "components": 29,
+      "width": 279.4,
+      "height": 152.4,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "baseplate_test1",
+      "name": "baseplate test1",
+      "source": "baseplate_test1.scad",
+      "category": "Other examples",
+      "components": 4,
+      "width": 56,
+      "height": 50,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "bubbles_674_doublepass",
+      "name": "bubbles 674 doublepass",
+      "source": "bubbles_674_doublepass.scad",
+      "category": "AOM layouts",
+      "components": 28,
+      "width": 279.4,
+      "height": 152.4,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "catseye-aom-halfinch-polaris",
+      "name": "catseye aom halfinch polaris",
+      "source": "catseye-aom-halfinch-polaris.scad",
+      "category": "AOM layouts",
+      "components": 15,
+      "width": 216,
+      "height": 120,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "catseye-aom-halfinch",
+      "name": "catseye aom halfinch",
+      "source": "catseye-aom-halfinch.scad",
+      "category": "AOM layouts",
+      "components": 15,
+      "width": 250,
+      "height": 120,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "catseye-aom-v2018-02-26a",
+      "name": "catseye aom v2018 02 26a",
+      "source": "catseye-aom-v2018-02-26a.scad",
+      "category": "AOM layouts",
+      "components": 14,
+      "width": 360,
+      "height": 130,
+      "partial": true,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+        "Source dependency warnings: WARNING: Ignoring unknown module 'aom_on_mount_km200pm' in file /catseye-aom-v2018-02-26a.scad, line 86 WARNING: Ignoring unknown module 'aom_on_mount_km200pm' in file /catseye-aom-v2018-02-26a.scad, line 86"
+      ]
+    },
+    {
+      "id": "catseye-aom-v2018-02-28a",
+      "name": "catseye aom v2018 02 28a",
+      "source": "catseye-aom-v2018-02-28a.scad",
+      "category": "AOM layouts",
+      "components": 13,
+      "width": 279,
+      "height": 130,
+      "partial": true,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+        "Source dependency warnings: WARNING: Ignoring unknown module 'aom_on_mount_km100pm' in file /catseye-aom-v2018-02-28a.scad, line 91 WARNING: Ignoring unknown module 'aom_on_mount_km100pm' in file /catseye-aom-v2018-02-28a.scad, line 91"
+      ]
+    },
+    {
+      "id": "catseye-aom-v2018-03-01a",
+      "name": "catseye aom v2018 03 01a",
+      "source": "catseye-aom-v2018-03-01a.scad",
+      "category": "AOM layouts",
+      "components": 14,
+      "width": 334.4,
+      "height": 101.2,
+      "partial": true,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+        "Source dependency warnings: WARNING: Ignoring unknown module 'aom_on_mount_km100pm' in file /catseye-aom-v2018-03-01a.scad, line 111 WARNING: Ignoring unknown module 'aom_on_mount_km100pm' in file /catseye-aom-v2018-03-01a.scad, line 111"
+      ]
+    },
+    {
+      "id": "doublepass_aom",
+      "name": "doublepass aom",
+      "source": "doublepass_aom.scad",
+      "category": "AOM layouts",
+      "components": 20,
+      "width": 278.4,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "doublepass_aom_v2",
+      "name": "doublepass aom v2",
+      "source": "doublepass_aom_v2.scad",
+      "category": "AOM layouts",
+      "components": 20,
+      "width": 279.4,
+      "height": 146.05,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "ecdl_support",
+      "name": "ecdl support",
+      "source": "ecdl_support.scad",
+      "category": "Other examples",
+      "components": 4,
+      "width": 194,
+      "height": 275,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "fibernoise_aom",
+      "name": "fibernoise aom",
+      "source": "fibernoise_aom.scad",
+      "category": "AOM layouts",
+      "components": 20,
+      "width": 278.4,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "fwk_injection",
+      "name": "fwk injection",
+      "source": "fwk_injection.scad",
+      "category": "Laser & locking",
+      "components": 39,
+      "width": 381,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "injection_lock",
+      "name": "injection lock",
+      "source": "injection_lock.scad",
+      "category": "Laser & locking",
+      "components": 8,
+      "width": 350,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "mixer",
+      "name": "mixer",
+      "source": "mixer.scad",
+      "category": "Splitters & mixers",
+      "components": 46,
+      "width": 428.3,
+      "height": 257.71,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "mixer_bubbles",
+      "name": "mixer bubbles",
+      "source": "mixer_bubbles.scad",
+      "category": "Splitters & mixers",
+      "components": 56,
+      "width": 458.4,
+      "height": 285.425,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "modular_doublepass_aom",
+      "name": "modular doublepass aom",
+      "source": "modular_doublepass_aom.scad",
+      "category": "AOM layouts",
+      "components": 25,
+      "width": 279.4,
+      "height": 146.05,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "modular_doublepass_aom_extra_out",
+      "name": "modular doublepass aom extra out",
+      "source": "modular_doublepass_aom_extra_out.scad",
+      "category": "AOM layouts",
+      "components": 26,
+      "width": 279.4,
+      "height": 146.05,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "noise_eater",
+      "name": "noise eater",
+      "source": "noise_eater.scad",
+      "category": "Laser & locking",
+      "components": 27,
+      "width": 342,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "overlap_test_part",
+      "name": "overlap test part",
+      "source": "overlap_test_part.scad",
+      "category": "Other examples",
+      "components": 4,
+      "width": 123.5,
+      "height": 98.1,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "qzz_baseplate",
+      "name": "qzz baseplate",
+      "source": "qzz_baseplate.scad",
+      "category": "Other examples",
+      "components": 21,
+      "width": 304.8,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "rbLock",
+      "name": "rbLock",
+      "source": "rbLock.scad",
+      "category": "Laser & locking",
+      "components": 15,
+      "width": 278.4,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "sample_mirror_mount",
+      "name": "sample mirror mount",
+      "source": "sample_mirror_mount.scad",
+      "category": "Other examples",
+      "components": 1,
+      "width": 60,
+      "height": 60,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "sample_pinhole_with_head_countersink",
+      "name": "sample pinhole with head countersink",
+      "source": "sample_pinhole_with_head_countersink.scad",
+      "category": "Other examples",
+      "components": 1,
+      "width": 50,
+      "height": 50,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "satabs",
+      "name": "satabs",
+      "source": "satabs.scad",
+      "category": "Laser & locking",
+      "components": 8,
+      "width": 240,
+      "height": 105,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "The source vapor-cell mesh ignores its show flag. The importer guards that display-only mesh so it is excluded from drilling; native holder holes and the cylindrical clearance pocket are retained.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "simple_example",
+      "name": "simple example",
+      "source": "simple_example.scad",
+      "category": "Other examples",
+      "components": 2,
+      "width": 50.8,
+      "height": 50.8,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "splitter_tree_2port",
+      "name": "splitter tree 2port",
+      "source": "splitter_tree_2port.scad",
+      "category": "Splitters & mixers",
+      "components": 19,
+      "width": 139.7,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "splitter_tree_3port",
+      "name": "splitter tree 3port",
+      "source": "splitter_tree_3port.scad",
+      "category": "Splitters & mixers",
+      "components": 35,
+      "width": 254,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "splitter_tree_3port_pd",
+      "name": "splitter tree 3port pd",
+      "source": "splitter_tree_3port_pd.scad",
+      "category": "Splitters & mixers",
+      "components": 34,
+      "width": 254,
+      "height": 127,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "triple_aom",
+      "name": "triple aom",
+      "source": "triple_aom.scad",
+      "category": "AOM layouts",
+      "components": 74,
+      "width": 609.6,
+      "height": 304.8,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--2_croc_combiner",
+      "name": "Rack \u00b7 2 croc combiner",
+      "source": "weebay_rack/2_croc_combiner.scad",
+      "category": "Rack optics",
+      "components": 10,
+      "width": 129,
+      "height": 52,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "weebay_rack--461_injection",
+      "name": "Rack \u00b7 461 injection",
+      "source": "weebay_rack/461_injection.scad",
+      "category": "Rack optics",
+      "components": 42,
+      "width": 203.2,
+      "height": 403.86,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--493_combined",
+      "name": "Rack \u00b7 493 combined",
+      "source": "weebay_rack/493_combined.scad",
+      "category": "Rack optics",
+      "components": 77,
+      "width": 264.4,
+      "height": 661.26,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--493_injection",
+      "name": "Rack \u00b7 493 injection",
+      "source": "weebay_rack/493_injection.scad",
+      "category": "Rack optics",
+      "components": 26,
+      "width": 228.6,
+      "height": 238.76,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--bp_on_rack",
+      "name": "Rack \u00b7 bp on rack",
+      "source": "weebay_rack/bp_on_rack.scad",
+      "category": "Rack optics",
+      "components": 34,
+      "width": 279.4,
+      "height": 233.46,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--croc_combiner",
+      "name": "Rack \u00b7 croc combiner",
+      "source": "weebay_rack/croc_combiner.scad",
+      "category": "Rack optics",
+      "components": 18,
+      "width": 184,
+      "height": 110.2,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--rack_4to1_combiner",
+      "name": "Rack \u00b7 rack 4to1 combiner",
+      "source": "weebay_rack/rack_4to1_combiner.scad",
+      "category": "Rack optics",
+      "components": 31,
+      "width": 353.06,
+      "height": 139.7,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "weebay_rack--rack_doublepass_aom",
+      "name": "Rack \u00b7 rack doublepass aom",
+      "source": "weebay_rack/rack_doublepass_aom.scad",
+      "category": "Rack optics",
+      "components": 17,
+      "width": 279.4,
+      "height": 124.46,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "weebay_rack--rack_doublepass_aom_v2",
+      "name": "Rack \u00b7 rack doublepass aom v2",
+      "source": "weebay_rack/rack_doublepass_aom_v2.scad",
+      "category": "Rack optics",
+      "components": 22,
+      "width": 279.4,
+      "height": 124.46,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+      ]
+    },
+    {
+      "id": "weebay_rack--single_pass_aom_eom",
+      "name": "Rack \u00b7 single pass aom eom",
+      "source": "weebay_rack/single_pass_aom_eom.scad",
+      "category": "Rack optics",
+      "components": 15,
+      "width": 279.4,
+      "height": 124.46,
+      "partial": false,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+      ]
+    },
+    {
+      "id": "splitter_tree_5port_upstream",
+      "name": "splitter tree 5port upstream",
+      "source": "splitter_tree_5port_upstream.scad",
+      "category": "Splitters & mixers",
+      "components": 46,
+      "width": 330.2,
+      "height": 127,
+      "partial": true,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+        "This is the upstream side of unresolved merge conflicts in splitter_tree_5port.scad. The original source is unchanged; compare these alternatives before using one."
+      ]
+    },
+    {
+      "id": "splitter_tree_5port_stashed",
+      "name": "splitter tree 5port stashed",
+      "source": "splitter_tree_5port_stashed.scad",
+      "category": "Splitters & mixers",
+      "components": 49,
+      "width": 317.5,
+      "height": 127,
+      "partial": true,
+      "notes": [
+        "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+        "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates.",
+        "This is the stashed side of unresolved merge conflicts in splitter_tree_5port.scad. The original source is unchanged; compare these alternatives before using one."
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "file": "2_output_doublepass.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "3_output_doublepass.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "baseplate_test1.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "bubbles_674_doublepass.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "catseye-aom-halfinch-polaris.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "catseye-aom-halfinch.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "catseye-aom-v2018-02-26a.scad",
+      "status": "partial",
+      "reason": "Read the project notes for missing source dependencies, meshes, or cutters."
+    },
+    {
+      "file": "catseye-aom-v2018-02-28a.scad",
+      "status": "partial",
+      "reason": "Read the project notes for missing source dependencies, meshes, or cutters."
+    },
+    {
+      "file": "catseye-aom-v2018-03-01a.scad",
+      "status": "partial",
+      "reason": "Read the project notes for missing source dependencies, meshes, or cutters."
+    },
+    {
+      "file": "doublepass_aom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "doublepass_aom_v2.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "ecdl_support.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "fibernoise_aom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "fwk_injection.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "injection_lock.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "mixer.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "mixer_bubbles.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "modular_doublepass_aom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "modular_doublepass_aom_extra_out.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "noise_eater.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "overlap_test_part.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "qzz_baseplate.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "rbLock.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "sample_mirror_mount.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "sample_pinhole_with_head_countersink.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "satabs.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "simple_example.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "splitter_tree_2port.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "splitter_tree_3port.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "splitter_tree_3port_pd.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "splitter_tree_5port.scad",
+      "status": "unavailable",
+      "reason": "The source contains unresolved merge conflicts. Both sides are offered as separate alternatives requiring review."
+    },
+    {
+      "file": "triple_aom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/2_croc_combiner.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/461_injection.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/493_combined.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/493_injection.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/bp_on_rack.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/croc_combiner.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/rack_4to1_combiner.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/rack_combiners.scad",
+      "status": "reference",
+      "reason": "This combined scene exceeds the editor\u2019s single-plate size or component limit."
+    },
+    {
+      "file": "weebay_rack/rack_doublepass_aom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/rack_doublepass_aom_v2.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "weebay_rack/single_pass_aom_eom.scad",
+      "status": "editable",
+      "reason": "Editable optical starter."
+    },
+    {
+      "file": "splitter_tree_5port_upstream.scad",
+      "status": "partial",
+      "reason": "Read the project notes for missing source dependencies, meshes, or cutters."
+    },
+    {
+      "file": "splitter_tree_5port_stashed.scad",
+      "status": "partial",
+      "reason": "Read the project notes for missing source dependencies, meshes, or cutters."
+    },
+    {
+      "file": "aom_optomech.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "baseplate_box.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "beams.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "bracket_dmm05.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "bracket_dmm05_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "bracket_ida12.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "bracket_ida12_long.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "bracket_ida12_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "bubbles_modular_params.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "butterfly_laser.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "cheese_non-para_crocs.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "croc_xyz.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "croc_xyz_baseplate.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "croc_xyz_floor_plate.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "croc_xyz_octagon_croc.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "croc_xyz_zadapter.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "dowel_pbs_mount.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "dowel_pbs_mount_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "dpass_aom_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "fiber_feedthrough_mount_2019_06_22a.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "fibernoise_aom_baseplate.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "fibernoise_aom_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "fwk_injection_lock_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "injection_lock_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "modular.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "mot_window_bracket.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "motorized_xy.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_brim200.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_brim_120_60_hang.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_brim_km100pm.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_brim_rightside_up_km100pm.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_km100_upside_down.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_km100pm.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_km100pm_ATM200.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_km100pm_gooch_housego.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "mount_periscope2.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "newport_diode_mount.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "newport_optics.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "noise_eater_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "octagon_croc.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "optomech.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "paracroc.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "paracroc_stage_plate_Cheese.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "periscope_base.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "power_meter_bracket.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "rbLock_baseplate.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "rbLock_label.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "rbOven_clamp.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "rb_cell_holder.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "reducer_nipple_redrill.scad",
+      "status": "specialty",
+      "reason": "Chamber, stage, or flange hardware; not a planar optical base-plate layout."
+    },
+    {
+      "file": "skate_mount_halfinch_pbs_bit_larger.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "skate_mount_pbs.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "skate_mount_pbs_bit_larger.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "skate_mount_pbs_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "skate_mount_pbs_set_20.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adapter_cage_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adapter_ida12.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adapter_newport_isolator.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adapter_newport_isolator_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_cage.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_cage_mount.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_ida12.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_ida12_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_io_3D_850.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_pda10a.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_rsp05.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_rsp05_low_profile.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "surface_adaptor_rsp05_low_profile_set.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "thorlabs_optomech.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "toptica_optics.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "translation_stages.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "upside_down_mount_km100pm_ATM200.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    },
+    {
+      "file": "util.scad",
+      "status": "library",
+      "reason": "Shared geometry or parameter library."
+    },
+    {
+      "file": "vapor_cell_holder.scad",
+      "status": "part",
+      "reason": "Individual adapter, fixture, label, fabrication set, or plate-only companion; not a separate optical layout."
+    }
+  ]
+}

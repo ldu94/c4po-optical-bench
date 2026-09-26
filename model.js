@@ -1,3 +1,4 @@
+import {projectParts} from './project-parts.js';
 // Positions are optical centers in mm; +Y is up, rotation is CCW about +Z.
 export const catalog = [
   {id:'k05s1', name:'Polaris mirror', part:'POLARIS-K05S1', kind:'mirror', module:'mirror_mount_k05s1', width:34, depth:30, offset:-14, h:12.7, file:'POLARIS-K05S1-Solidworks.stl', args:'use_nut=false, show_mirror=show'},
@@ -19,9 +20,10 @@ export const catalog = [
   {id:'iris_slide', name:'Sliding adjustable iris', part:'IDA12 · 4 mm slider', category:'Mounts & irises', kind:'iris', module:'pinhole_ida12_slide_mount', width:30, depth:25, offset:0, h:20, previewDz:12.7, requiredBeamHeight:12.7, note:'Sliding bracket uses a 12.7 mm beam height.', args:'use_nut=false, slide_range=4, show_mount=show'},
   {id:'k05s2', name:'Polaris locking mirror', part:'POLARIS-K05S2', category:'Mirrors & lenses', kind:'mirror', module:'mirror_mount_k05s2', width:36, depth:32, offset:-14, h:12.7, previewDz:0, args:'use_nut=false, show_mirror=show'},
 ];
+catalog.push(...projectParts);
 for(const part of catalog)part.category??=part.kind==='iris'?'Mounts & irises':'Mirrors & lenses';
 export const cadFiles=['c4po-web.scad','thorlabs_optomech.scad','aom_optomech.scad','util.scad'];
-export function cadCall(part,dz='base_dz',show='show',drill='drill'){return `${part.originShift?`translate(${JSON.stringify(part.originShift)}) `:''}${part.module}(dz=${dz}, drill=${drill}, show=${show}, ${part.args.replaceAll('=show',`=${show}`)});`;}
+export function cadCall(part,dz='base_dz',show='show',drill='drill'){if(part.sourceAsset)return `if(${drill}) { include <${part.sourceAsset}>; }`;return `${part.originShift?`translate(${JSON.stringify(part.originShift)}) `:''}${part.module}(dz=${dz}, drill=${drill}, show=${show}, ${part.args.replaceAll('=show',`=${show}`)});`;}
 export const byId = Object.assign(Object.create(null),Object.fromEntries(catalog.map(c=>[c.id,c])));
 export function example(){ return {version:2,view:{showBeams:true,showMounts:false},name:'Folded optical path',plate:{width:260,height:180,thickness:25.4,beamHeight:12.7,grid:12.7,snap:1,cornerHoles:true},components:[
 {id:'iris-1',type:'ida12',label:'Iris',x:35,y:50,angle:0},
@@ -45,10 +47,13 @@ export function validate(data){
   if(typeof c.id!=='string'||!c.id||c.id.length>100||ids.has(c.id))throw Error('Component IDs must be unique.');ids.add(c.id);
   if(typeof c.label!=='string'||c.label.length>60)throw Error('Labels must be at most 60 characters.');
   if(byId[c.type].requiredBeamHeight && Math.abs(p.beamHeight-byId[c.type].requiredBeamHeight)>1e-6)throw Error(`${byId[c.type].name} needs a ${byId[c.type].requiredBeamHeight} mm beam height.`);
+  if(c.z!==undefined)number(c.z,-1000,1000,'Z');
+  if(c.basis!==undefined){if(!byId[c.type].sourceAsset||!Array.isArray(c.basis)||c.basis.length!==4||c.basis.some(row=>!Array.isArray(row)||row.length!==4))throw Error('Invalid source orientation.');for(const row of c.basis)for(const v of row)number(v,-1000,1000,'Orientation');if(JSON.stringify(c.basis[3])!=='[0,0,0,1]'||c.basis.slice(0,3).some(row=>row[3]!==0))throw Error('Source orientation must not translate components.');}
   number(c.x,0,p.width,'X');number(c.y,0,p.height,'Y');number(c.angle,-360,360,'Angle');
  }
  if(!Array.isArray(data.connections)||data.connections.length>300)throw Error('Invalid beam guides.');
  for(const e of data.connections)if(!Array.isArray(e)||e.length!==2||e[0]===e[1]||!e.every(id=>ids.has(id)))throw Error('A beam guide has an invalid endpoint.');
+ if(data.project!==undefined){if(typeof data.project.source!=='string'||data.project.source.length>250||!Array.isArray(data.project.notes)||data.project.notes.length>20||data.project.notes.some(n=>typeof n!=='string'||n.length>3000))throw Error('Invalid source project notes.');}
  const result=structuredClone(data);result.version=2;result.view={showBeams:data.view?.showBeams??true,showMounts:data.view?.showMounts??false};
  if(typeof result.view.showBeams!=='boolean'||typeof result.view.showMounts!=='boolean')throw Error('Invalid viewer settings.');
  return result;
@@ -56,14 +61,14 @@ export function validate(data){
 export function footprint(c){const d=byId[c.type],r=c.angle*Math.PI/180;return [[-d.depth/2,-d.width/2],[d.depth/2,-d.width/2],[d.depth/2,d.width/2],[-d.depth/2,d.width/2]].map(([x,y])=>{x+=d.offset;return [c.x+x*Math.cos(r)-y*Math.sin(r),c.y+x*Math.sin(r)+y*Math.cos(r)];});}
 export function overlaps(a,b){return ![a,b].some(poly=>poly.some((p,i)=>{const q=poly[(i+1)%poly.length],axis=[q[1]-p[1],p[0]-q[0]],proj=s=>s.map(v=>v[0]*axis[0]+v[1]*axis[1]),pa=proj(a),pb=proj(b);return Math.max(...pa)<Math.min(...pb)||Math.max(...pb)<Math.min(...pa);}));}
 export function issues(s){const out=[],p=s.plate;
- for(const c of s.components){const d=byId[c.type];if(!d.sideMount&&footprint(c).some(([x,y])=>x<2||y<2||x>p.width-2||y>p.height-2))out.push(`${c.label}: approximate mount envelope reaches the plate edge.`);
+ for(const c of s.components){const d=byId[c.type];if(d.sourceAsset&&!d.hasCutter)out.push(`${c.label}: no native mounting cutter is available.`);if(!d.sideMount&&footprint(c).some(([x,y])=>x<2||y<2||x>p.width-2||y>p.height-2))out.push(`${c.label}: approximate mount envelope reaches the plate edge.`);
  if(d.h-p.beamHeight>p.thickness-2)out.push(`${c.label}: recess leaves less than 2 mm of plate below the mount.`);}
  for(let i=0;i<s.components.length;i++)for(let j=i+1;j<s.components.length;j++)if(overlaps(footprint(s.components[i]),footprint(s.components[j])))out.push(`${s.components[i].label} / ${s.components[j].label}: approximate mount envelopes overlap.`);
  return out;
 }
 const n=v=>Number(v.toFixed(5));
 export function scad(s,assembly=false){validate(s);const p=s.plate;
- return `// Generated by C4PO Optical Bench. Units: mm. +Y up; angles CCW.\n// Place in the original c4po folder or this app's cad/ directory for desktop rendering.\n// Mechanical geometry comes from the existing c4po library.\nuse <aom_optomech.scad>;\ninclude <thorlabs_optomech.scad>;\n$fn=48;\nbase_dz=${n(p.beamHeight)};\nshow_components=${assembly};\nmodule components(drill=false,show=false){\n${s.components.map(c=>`  translate([${n(c.x)},${n(c.y)},0]) rotate([0,0,${n(c.angle)}])\n    ${cadCall(byId[c.type])}`).join('\n')}\n}\nmodule plate(){\n difference(){\n  translate([0,0,-base_dz-${n(p.thickness)}]) cube([${n(p.width)},${n(p.height)},${n(p.thickness)}]);\n  components(drill=true,show=false);\n${p.cornerHoles?`  // 1/4-20 clearance holes, 12.7 mm from each edge.\n  for(x=[12.7,${n(p.width-12.7)}], y=[12.7,${n(p.height-12.7)}])\n   translate([x,y,-base_dz-${n(p.thickness)}-1]) cylinder(d=6.604,h=${n(p.thickness+2)});`:''}\n }\n}\nplate();\nif(show_components) components(drill=false,show=true);\n`;}
+ return `// Generated by C4PO Optical Bench. Units: mm. +Y up; angles CCW.\n// Place in the original c4po folder or this app's cad/ directory for desktop rendering.\n// Mechanical geometry comes from the existing c4po library.\nuse <aom_optomech.scad>;\ninclude <thorlabs_optomech.scad>;\n$fn=48;\nbase_dz=${n(p.beamHeight)};\nshow_components=${assembly};\nmodule components(drill=false,show=false){\n${s.components.map(c=>`  translate([${n(c.x)},${n(c.y)},${n(c.z||0)}]) rotate([0,0,${n(c.angle)}]) ${c.basis?`multmatrix(${JSON.stringify(c.basis)})`:''}\n    ${byId[c.type].sourceAsset?`{ if(drill) { include <${byId[c.type].sourceAsset}>; } ${assembly?`if(show) { include <${byId[c.type].sourcePreview}>; }`:''} }`:cadCall(byId[c.type])}`).join('\n')}\n}\nmodule plate(){\n difference(){\n  translate([0,0,-base_dz-${n(p.thickness)}]) cube([${n(p.width)},${n(p.height)},${n(p.thickness)}]);\n  components(drill=true,show=false);\n${p.cornerHoles?`  // 1/4-20 clearance holes, 12.7 mm from each edge.\n  for(x=[12.7,${n(p.width-12.7)}], y=[12.7,${n(p.height-12.7)}])\n   translate([x,y,-base_dz-${n(p.thickness)}-1]) cylinder(d=6.604,h=${n(p.thickness+2)});`:''}\n }\n}\nplate();\nif(show_components) components(drill=false,show=true);\n`;}
 
 // Editable starting layout adapted from doublepass_aom.scad (standard Isomet configuration).
 // Optional/hidden cuts, labels, and bespoke table mounting holes are not imported.
@@ -75,4 +80,6 @@ export function doublePassExample(){
  const paths=[['fp_in','hwp_in','mIn1','mIn2','mIn3','PBS','tele_1','tele_2','turn_1','turn_2','AOM','QWP','cat_lens','cat_mirror'],['cat_mirror','cat_lens','QWP','AOM','turn_2','turn_1','tele_2','tele_1','PBS','mOut1','HWP_out','mOut2','fp_out']];
  s.connections=paths.flatMap(path=>path.slice(1).map((id,i)=>[path[i],id]));return validate(s);
 }
-export function beamSegments(layout){const parts=new Map(layout.components.map(c=>[c.id,c]));return layout.connections.map(([a,b])=>[parts.get(a),parts.get(b)]).filter(([a,b])=>a&&b).map(([a,b])=>({start:[a.x,a.y,0],end:[b.x,b.y,0]}));}
+export function beamSegments(layout){const parts=new Map(layout.components.map(c=>[c.id,c]));return layout.connections.map(([a,b])=>[parts.get(a),parts.get(b)]).filter(([a,b])=>a&&b).map(([a,b])=>({start:[a.x,a.y,a.z||0],end:[b.x,b.y,b.z||0]}));}
+
+export function layoutCadFiles(layout){return [...new Set([...cadFiles,...layout.components.flatMap(c=>{const p=byId[c.type];return p.sourceAsset?[p.sourceAsset,...p.cutAssets]:[];})])];}

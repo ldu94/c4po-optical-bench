@@ -1,3 +1,6 @@
 .DS_Store
 node_modules/
 *.log
+
+# Importer scratch files; shipped together in project-geometry.json.
+/cad/projects/

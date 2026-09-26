@@ -1,0 +1,167 @@
+{
+  "version": 2,
+  "name": "ecdl support",
+  "view": {
+    "showBeams": true,
+    "showMounts": true
+  },
+  "plate": {
+    "width": 194,
+    "height": 275,
+    "thickness": 13.5,
+    "beamHeight": 12.7,
+    "grid": 12.7,
+    "snap": 0,
+    "cornerHoles": false
+  },
+  "components": [
+    {
+      "id": "part-0",
+      "type": "src-809c1c1adda4bcfd",
+      "label": "km05 1",
+      "x": 55,
+      "y": 23.5,
+      "z": 0.8,
+      "angle": 0,
+      "basis": [
+        [
+          0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0.70711,
+          0.70711,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "src-809c1c1adda4bcfd",
+      "label": "km05 2",
+      "x": 150,
+      "y": 23.5,
+      "z": 0.8,
+      "angle": 0,
+      "basis": [
+        [
+          -0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "src-809c1c1adda4bcfd",
+      "label": "km05 3",
+      "x": 150,
+      "y": 248.5,
+      "z": 0.8,
+      "angle": 0,
+      "basis": [
+        [
+          -0.70711,
+          0.70711,
+          0,
+          0
+        ],
+        [
+          -0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "src-7933119a5fbcab57",
+      "label": "km05 4",
+      "x": 100,
+      "y": 248.5,
+      "z": 0.8,
+      "angle": 0,
+      "basis": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "connections": [],
+  "project": {
+    "id": "ecdl_support",
+    "source": "ecdl_support.scad",
+    "notes": [
+      "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed."
+    ]
+  }
+}

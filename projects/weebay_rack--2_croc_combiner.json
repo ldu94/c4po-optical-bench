@@ -1,0 +1,378 @@
+{
+  "version": 2,
+  "name": "Rack · 2 croc combiner",
+  "view": {
+    "showBeams": true,
+    "showMounts": true
+  },
+  "plate": {
+    "width": 129,
+    "height": 52,
+    "thickness": 16,
+    "beamHeight": 12.7,
+    "grid": 12.7,
+    "snap": 0,
+    "cornerHoles": false
+  },
+  "components": [
+    {
+      "id": "part-0",
+      "type": "src-5fb6e847eba1306c",
+      "label": "k05s2 1",
+      "x": 0,
+      "y": 13,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "src-0fc99387f210caf6",
+      "label": "rsp05 2",
+      "x": 32,
+      "y": 13,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "src-0fc99387f210caf6",
+      "label": "rsp05 3",
+      "x": 44,
+      "y": 13,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "src-f29911ac2bf8f3f5",
+      "label": "k05s2 4",
+      "x": 74,
+      "y": 13,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0.70711,
+          -0.70711,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "src-5fb6e847eba1306c",
+      "label": "k05s2 5",
+      "x": 0,
+      "y": 39,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "src-0fc99387f210caf6",
+      "label": "rsp05 6",
+      "x": 32,
+      "y": 39,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-6",
+      "type": "src-0fc99387f210caf6",
+      "label": "rsp05 7",
+      "x": 44,
+      "y": 39,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-7",
+      "type": "src-ba90f128d094fafa",
+      "label": "b05g 8",
+      "x": 74,
+      "y": 38,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          0.70711,
+          0.70711,
+          0,
+          0
+        ],
+        [
+          -0.70711,
+          0.70711,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-8",
+      "type": "src-0fc99387f210caf6",
+      "label": "rsp05 9",
+      "x": 112,
+      "y": 38,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "part-9",
+      "type": "src-565fd9e992aad5b1",
+      "label": "lmr1 10",
+      "x": 124,
+      "y": 38,
+      "z": 0,
+      "angle": 0,
+      "basis": [
+        [
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "connections": [],
+  "project": {
+    "id": "weebay_rack--2_croc_combiner",
+    "source": "weebay_rack/2_croc_combiner.scad",
+    "notes": [
+      "Editable component placements and native component cutters extracted from the source. The plate is an enclosing rectangular blank; custom outlines, table holes, labels, and non-component fixtures are not imported. Beam connections are recovered only where source beam segments pass through known component origins; unmatched segments are omitted. Connect additional optical centers as needed.",
+      "Uses the main assembly configuration rather than a machining-only source view. Optional alternate configurations are not separate templates."
+    ]
+  }
+}
